@@ -1,0 +1,341 @@
+* {
+    --main-color: rgb(2, 169, 224);
+    --seconde-color: #32383e;
+    --color-text: #fff;
+    --btn-main-color: #205072;
+    --mocolor: #09c;
+}
+
+@font-face {
+    font-family: OCRAEXT;
+    src: url(../fonts/OCRAEXT.TTF);
+}
+
+@font-face {
+    font-family: AraHamahAlThawra;
+    src: url(../fonts/AraHamahAlThawra.ttf);
+}
+
+@font-face {
+    font-family: AraHamah1964B;
+    src: url(../fonts/AraHamah1964B-Bold.ttf);
+    font-weight: bold;
+}
+body {
+    color: var(--color-text);
+    font-family: "AraHamahAlThawra", "AraHamah1964B", "OCRAEXT", "Comic Sans", Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    background: linear-gradient(20deg, var(--mocolor), var(--color-text), var(--main-color), var(--seconde-color)) ;
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: 400;
+    animation: backgroundrotation 10s ease infinite;
+}
+
+@keyframes backgroundrotation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+.maincontent {
+    text-align: center;
+    inset: 0;
+    display: none;
+}
+
+.maincontent .mostafatext {
+    font-size: 100px;
+}
+
+.nav-link {
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all ease 0.5s;
+}
+
+.nav-item {
+    display: none;
+    color: var(--btn-main-color) !important;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+    color: #09c !important;
+}
+
+.nav-link:hover {
+    border: 2px solid #09c;
+    color: #09c !important;
+    font-weight: 700 !important;
+    font-size: 25px;
+    transform: translateX(30%);
+}
+
+.menutitle {
+    display: none;
+    color: var(--btn-main-color);
+}
+
+.exitbtn {
+    position: absolute;
+    top: 11px;
+    right: 25px;
+    max-width: 20px;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+.exitbtn:hover {
+    transform: rotate(360deg);
+    border-radius: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    max-width: 0px;
+    border-radius: 50%;
+}
+
+.btnopenleftmenu {
+    background-color: var(--color-text);
+    color: var(--btn-main-color);
+    cursor: pointer;
+    text-align: center;
+    z-index: 9999999999;
+    display: none;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.openleftmenulogo img {
+    width: 40px;
+}
+
+.openleftmenuexit i {
+    font-size: 40px;
+    color: var(--seconde-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: all ease 1s;
+}
+
+.openleftmenuexit i:hover {
+    transform: translate(-50%, -50%) rotate(360deg);
+    border-radius: 10px;
+}
+
+.totopicon {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+
+.totopicon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.moloading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    z-index: 9999999;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    inset: 0;
+}
+
+.moloader {
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border-left: 8px solid #ffffff;
+    border-bottom: 8px solid transparent;
+    animation: rotation 1.5s linear infinite reverse;
+    position: relative;
+}
+
+.moloader::after {
+    content: '';
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border-left: 8px solid #00a2ff;
+    border-bottom: 8px solid transparent;
+    animation: rotation 0.7s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.leftMenu {
+    background-color: var(--color-text);
+    width: 0px;
+    left: -200px;
+    height: 100%;
+    position: fixed;
+    z-index: 99999999999;
+    top: 0;
+}
+
+.mofooter {
+    position: relative;
+    display: none;
+}
+
+.Homesocials {
+    margin: -10px !important;
+    position: absolute;
+    bottom: 10px;
+    left: 60%;
+    transform: translate(-50%);
+}
+
+.Homesocials .mico-circle {
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.Homesocials a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1.5rem 0;
+}
+
+.Homesocials ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0px;
+}
+
+.Homesocials ul li {
+    margin-bottom: 20px;
+    transition: all ease 1s;
+}
+
+.Homesocials ul li:hover {
+    transform: translate(-20%);
+}
+
+.moviescard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.moviescard img {
+    max-width: 100%;
+}
+
+.moviescard:hover .cardlayer {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+
+}
+
+.cardlayer {
+    background-color: #fff;
+    opacity: 0.7;
+    position: absolute;
+    bottom: -100%;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    transition: all ease 1s;
+}
+
+.moviedetails {
+    color: var(--main-color);
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #09c;
+    width: 100%;
+    margin: auto;
+}
+
+.sreachMovie {
+    margin: 0px 30px;
+}
+
+.sreachMovie .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid rgba(255, 255, 255, .7);
+    border-radius: 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#searchedmovies {
+    border: none;
+    border-bottom: 3px solid var(--btn-main-color);
+}
+
+.section2{
+    display: none;
+}

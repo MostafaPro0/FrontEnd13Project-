@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <title>Movies Hall</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-utilities.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="./css/fontawesome.css" rel="stylesheet">
+  <link href="./css/ionicons.min.css" rel="stylesheet">
+  <link href="./css/brands.css" rel="stylesheet">
+  <link href="./css/solid.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="leftMenu">
+    <img class="exitbtn mt-3" src="./images/exit.png" alt="exit left menu">
+    <img class="logo mt-3" src="./images/Logo.png" alt="logo photo">
+    <div class="row mt-4">
+      <h5 class="menutitle mb-0 text-uppercase text-center">
+        Movies Hall
+      </h5>
+    </div>
+    <ul class="navbar-nav ms-auto mb-2 menu small align-items-center  mt-3">
+      <li class="nav-item">
+        <a role="button" class="nav-link active text-uppercase" aria-current="page" data-category="now_playing">now
+          playing</a>
+      </li>
+      <li class="nav-item">
+        <a role="button" class="nav-link text-uppercase" data-category="popular">popular</a>
+      </li>
+      <li class="nav-item">
+        <a role="button" class="nav-link text-uppercase" data-category="top_rated">top rated</a>
+      </li>
+      <li class="nav-item">
+        <a role="button" class="nav-link text-uppercase" data-category="trending">trending</a>
+      </li>
+      <li class="nav-item">
+        <a role="button" class="nav-link text-uppercase" data-category="upcoming">upcoming</a>
+      </li>
+      <li class="nav-item">
+        <a role="button" class="nav-link text-uppercase" href="#contactus">contact us</a>
+      </li>
+    </ul>
+
+    <div class="row copyrights">
+      <h4>Copy Right 2023 © By Mostafa Mohamed All Rights Reserved</h4>
+    </div>
+  </div>
+
+  <div class="totopicon">
+    <a href="#top">
+      <img src="./images/up-arrow.png" alt="">
+    </a>
+  </div>
+  <div class="section1bg intro">
+    <section id="home" class="section1 position-relative">
+
+      <div class="btnopenleftmenu border-start border-3">
+        <div class="openleftmenulogo">
+          <img src="images/logo1.png">
+        </div>
+        <div class="openleftmenuexit">
+          <i class="fa fa-align-justify"></i>
+        </div>
+        <div class="Homesocials">
+          <ul class="row">
+            <li class="col-4 col-sm-6 col-md-12"><a href="https://www.facebook.com/MostafaPro0" target="_blank"><span
+                  class="mico-circle"><i class="fa-brands fa-facebook-f"></i></span></a></li>
+            <li class="col-4 col-sm-6 col-md-12"><a href="https://www.instagram.com/MostafaPro0" target="_blank"><span
+                  class="mico-circle"><i class="fa-brands fa-instagram"></i></span></a></li>
+            <li class="col-4 col-sm-6 col-md-12"><a href="https://www.twitter.com/MostafaPro0" target="_blank"><span
+                  class="mico-circle"><i class="fa-brands fa-twitter"></i></span></a></li>
+            <li class="col-4 col-sm-6 col-md-12"><a href="https://www.linkedin.com/in/mostafapro/" target="_blank"><span
+                  class="mico-circle"><i class="fa-brands fa-linkedin-in"></i></span></a></li>
+            <li class="col-4 col-sm-6 col-md-12"><a href="https://www.github.com/mostafapro0/" target="_blank"><span
+                  class="mico-circle"><i class="fa-brands fa-github"></i></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="maincontent mt-5">
+        <h1 class="mostafatext m-auto">Movies Hall</h1>
+        <h6 class="m-auto">Find Your Favourite Movie</h6>
+        <div class="container">
+          <div class="sreachMovie mt-4 row ps-5 pe-5">
+            <div class="col-12 col-sm-12 col-md-6">
+              <input class="form-control  text-center" type="text" name="" id="searchword"
+                placeholder="Search for movies by Category Name">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+              <input class="form-control  text-center" type="text" name="" id="searchin"
+                placeholder="Search in Movie List by Movie Title Name">
+            </div>
+          </div>
+
+          <div id="searchedmovies" class="row g-4 p-5">
+          </div>
+          <div id="movies" class="row g-4 p-5">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contactus" class="section2 pb-5 m-auto">
+      <div class="container">
+        <div class="mt-4 row ps-5 pe-5 g-4">
+          <h2 class="text-center fs-1">Contact Us</h2>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="text" name="" id="yourname"
+              placeholder="Enter Your Name">
+
+            <div id="yournamecheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="email" name="" id="youremail"
+              placeholder="Enter Your Email">
+
+            <div id="youremailcheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="text" name="" id="yourphone"
+              placeholder="Enter Your Phone">
+
+            <div id="yourphonecheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="text" name="" id="yourage"
+              placeholder="Enter Your Age">
+
+            <div id="youragecheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="password" name="" id="yourpass"
+              placeholder="Enter Password">
+
+            <div id="yourpasscheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative">
+            <input class="form-control text-center fs-2 rounded-3" type="password" name="" id="yourrepass"
+              placeholder="Enter RePassword">
+
+            <div id="yourrepasscheck" class="invalid-tooltip">
+              Error Input
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 position-relative m-auto text-center ">
+            <input class="btn btn-info m-4 fs-2 rounded-3" type="button" value="Submit">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div class="moloading">
+    <div class="moloader"></div>
+  </div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script src="./js/jquery.typewriter.min.js"></script>
+  <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
